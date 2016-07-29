@@ -1,0 +1,435 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+
+  ****
+
+  Material Design Lite
+  Derechos de autor 2015 Google Inc. Todos los derechos reservados .
+
+  Bajo la licencia Apache, versión 2.0 ( la "Licencia" ) ;
+  no se puede utilizar este archivo salvo en cumplimiento de la Licencia .
+  Usted puede obtener una copia de la Licencia en
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  A menos que lo requiera la ley aplicable o se acuerde por escrito, el software
+  distribuido bajo la Licencia se distribuye "TAL CUAL",
+  SIN GARANTÍAS O CONDICIONES DE CUALQUIER TIPO, ya sea expresa o implícita.
+  Consulte la licencia para los permisos de idioma específico que rige y
+  limitaciones en la licencia
+-->
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Descripción del TURCO 3.=">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Turco 3.0</title>
+
+    <!-- Añadir a pantalla de inicio para Chrome en Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Añadir a la pantalla principal para Safari en iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon para Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="material.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+
+    </style>    
+  </head>
+  <body>
+    <div class="layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+
+      <header class="header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title"><img src="images/logo_turco2.svg" alt="Logo Turco 3.0" height="40px" width="auto"></span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search">
+              <label class="mdl-textfield__label" for="search">Introduzca su consulta ...</label>
+            </div>
+          </div>
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+            <i class="material-icons">more_vert</i>
+          </button>
+          <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+            <li class="mdl-menu__item">Acerca de</li>
+            <li class="mdl-menu__item">Soporte</li>
+            <li class="mdl-menu__item">Información legal</li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+
+        <!-- Aquí debe ir la información del usuario, así como el menú para su perfil y opciones -->
+        <header class="drawer-header">
+          <!-- Fotografía del usuario -->
+          <img src="images/user.jpg" class="avatar">
+          <!-- Nombre del usuario -->
+          <div class="avatar-dropdown">
+            <span>Jaro Marval</span>
+            <div class="mdl-layout-spacer"></div>
+            <!-- Menú del usuario -->
+            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+              <i class="material-icons" role="presentation">arrow_drop_down</i>
+              <span class="visuallyhidden">Menú del usuario</span>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+              <li class="mdl-menu__item">Editar perfil</li>
+              <li class="mdl-menu__item">Salir</li>
+              <li class="mdl-menu__item"><i class="material-icons">add</i>Entrar con otra cuenta...</li>
+            </ul>
+          </div>
+        </header>
+
+        <!-- Barra de navegación -->
+        <nav class="navigation mdl-navigation mdl-color--blue-grey-800">
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Inicio</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Asistencia</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Adelanto</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Cifras Importantes</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Foro</a>
+          <div class="mdl-layout-spacer"></div>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Ayudas para el TURCO</span></a>
+        </nav>
+      </div>
+
+      <main class="mdl-layout__content mdl-color--grey-100">
+
+        <!-- Identificación de la unidad / Aquí el background-color debe variar según la unidad -->
+        <h3 class="titulo1" style="background-color: green;"" >Tropa Masculina</h3>
+
+        <!-- Datos del Grupo y la Unidad -->
+        <div class="mdl-grid content">          
+          <!-- Datos de ubicación del Grupo y la Unidad -->
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone text-left grande">
+            Región: <b> Falcón</b><br><!-- Nombre de la Región -->
+            Distrito: <b> Paraguaná</b><br><!-- Nombre del Distrito -->
+            Grupo: <b> Baden-Powell</b><br><!-- Nombre del Grupo -->
+            <hr>
+            <!-- Esto varia según la unidad / Y el color del SI o el No según sea positivo o negativo -->
+            Unidad al 50% <b class="mdl-color-text--blue">SI</b><br>
+            Unidad al 75% <b class="mdl-color-text--deep-orange-900">NO</b>
+          </div>
+
+          <!-- Datos estadísticos -->
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--4-col-phone text-left mdl-shadow--2dp mdl-color--white">
+            <div id="columnchart_values" style="width: 300px; height: auto;"></div>
+          </div>
+
+          <!-- Datos de registro -->
+          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp mdl-color--white">
+            <div id="piechart" style="width: 400px; height: auto;"></div>
+          </div>
+        </div>
+
+        <!-- Mensajes de alerta y recordatorios -->
+        <div class="mdl-grid content">
+          <h4 class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--4-col-phone azulclaro contenedor"><i class="material-icons mdl-color-text--deep-orange-900">error</i> Alertas</h4><!-- Título -->
+          <!-- Alertas entrega de adelantos: Esto debe variar según la rama, y sólo debe aparecer el mensaje cuando existan insignias pendientes según la fecha de entrega -->
+          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">            
+            <table class="contenedor" style="text-align: left; width: 100%;" border="0" cellpadding="2"
+            cellspacing="2">
+              <tbody>
+                <tr>
+                  <td>Aventurero</td>
+                  <td class="mdl-color-text--deep-orange-900"> 2 entregas pendientes</td>
+                </tr>
+                <tr>
+                  <td>Explorador</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Pionero</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Scout de Bolívar</td>
+                  <td class="mdl-color-text--deep-orange-900"> 1 entregas pendientes</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
+            <table class="contenedor" style="text-align: left; width: 100%;" border="0" cellpadding="2"
+            cellspacing="2">
+              <tbody>
+                <tr>
+                  <td width="70%">Niños y/o jóvenes con baja asistencia</td>
+                  <td class="mdl-color-text--deep-orange-900 text-left"> 1</td>
+                </tr>
+                <tr>
+                  <td width="70%">Jóvenes con la edad y la antigüedad para obtener su Máxima Insignia</td>
+                  <td class="mdl-color-text--deep-orange-900 text-left"> 1</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- MENSAJES: Aquí se verán los mensajes internos del sistema, es decir los que el Jefe de Grupo quiere que vena todas las unidades -->
+            <div class="mensaje mdl-color--yellow-100 mdl-shadow--2dp">
+              Una gota de agua puede parecer insignificante; pero el Mar no será el mismo sin esa gota de agua.
+            </div>
+          </div>
+        </div>
+
+
+        <!-- DATOS GENERALES de los miembros de la Unidad: Jóvenes y Adultos
+        Aquí deberá aparecer un botón en cada fila para editar estos datos, si el usuario tiene las atribuciones -->
+        <div class="mdl-grid content">
+          <!-- Datos generales de los jóvenes -->
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
+            <h5 class="mdl-color-text--blue-grey-700">Datos Jóvenes</h5>
+            <table class="mdl-data-table mdl-shadow--2dp mdl-color--white" width="100%">
+              <thead>
+                <tr class="mdl-color--yellow-100">
+                  <th>Credencial</th>
+                  <th class="mdl-data-table__cell--non-numeric">Nombre y Apellido</th>
+                  <th class="mdl-data-table__cell--non-numeric">Patrulla</th>
+                  <th>Editar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>22569748</td>
+                  <td class="mdl-data-table__cell--non-numeric">Jesus Yanez</td>
+                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td>22369852</td>
+                  <td class="mdl-data-table__cell--non-numeric">Juan Vargas</td>
+                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td>23159753</td>
+                  <td class="mdl-data-table__cell--non-numeric">Kristian Marin</td>
+                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td>23123456</td>
+                  <td class="mdl-data-table__cell--non-numeric">Anderson Perozo</td>
+                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td>23321654</td>
+                  <td class="mdl-data-table__cell--non-numeric">Yosman Perozo</td>
+                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td>23587456</td>
+                  <td class="mdl-data-table__cell--non-numeric">Alejandro Bravo</td>
+                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td>23456789</td>
+                  <td class="mdl-data-table__cell--non-numeric">Cesar Leañez</td>
+                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td>23963147</td>
+                  <td class="mdl-data-table__cell--non-numeric">Rayber Ventura</td>
+                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="mdl-data-table__cell--non-numeric"></td>
+                  <td class="mdl-data-table__cell--non-numeric"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>21596381</td>
+                  <td class="mdl-data-table__cell--non-numeric">José Jiménez</td>
+                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td>22326541</td>
+                  <td class="mdl-data-table__cell--non-numeric">Raul Rodríguez</td>
+                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td>22465897</td>
+                  <td class="mdl-data-table__cell--non-numeric">Roland Ratton</td>
+                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td>23321987</td>
+                  <td class="mdl-data-table__cell--non-numeric">Yanfran Yagua</td>
+                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td>23132879</td>
+                  <td class="mdl-data-table__cell--non-numeric">Carlos Cortéz</td>
+                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td>23564897</td>
+                  <td class="mdl-data-table__cell--non-numeric">Enfre Eljuri</td>
+                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td>23214896</td>
+                  <td class="mdl-data-table__cell--non-numeric">Sandro Sánchez</td>
+                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td>23542198</td>
+                  <td class="mdl-data-table__cell--non-numeric">Pedro Parker</td>
+                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
+                  <td><i class="material-icons azulclaro">mode_edit</i></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="mdl-data-table__cell--non-numeric"></td>
+                  <td class="mdl-data-table__cell--non-numeric"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="mdl-data-table__cell--non-numeric"></td>
+                  <td class="mdl-data-table__cell--non-numeric"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="mdl-data-table__cell--non-numeric"></td>
+                  <td class="mdl-data-table__cell--non-numeric"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="mdl-data-table__cell--non-numeric"></td>
+                  <td class="mdl-data-table__cell--non-numeric"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="mdl-data-table__cell--non-numeric"></td>
+                  <td class="mdl-data-table__cell--non-numeric"></td>
+                  <td></td>
+                </tr>
+              </tbody>              
+            </table>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
+          </div>
+          
+        </div>
+      </main>
+
+      <!-- ******************************** -->
+      <!-- Situado al final del documento para que las páginas se carguen más rápido -->      
+      <script src="material.min.js"></script>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+      <script type="text/javascript">     
+      
+        google.charts.load("current", {packages:['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ["Indicador", "Meta", { role: "style" } ],
+            ["Permanencia", 60, "silver"],
+            ["Crecimiento", 30, "gold"],
+          ]);
+
+          var view = new google.visualization.DataView(data);
+          view.setColumns([0, 1,
+                           { calc: "stringify",
+                             sourceColumn: 1,
+                             type: "string",
+                             role: "annotation" },
+                           2]);
+
+          var options = {
+            width: 300,
+            height: 200,
+            bar: {groupWidth: "95%"},
+            legend: { position: "none" },
+          };
+
+          var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+          chart.draw(view, options);
+
+          var jovenes = 11;
+          var adultos = 2;
+
+          var data = google.visualization.arrayToDataTable([
+            ['Categoria', 'Cant'],
+            ['Jóvenes ('+jovenes+')',     jovenes],
+            ['Adultos ('+adultos+')',      adultos],
+          ]);
+
+          var options = {
+            title: 'Registro Unidad'
+          };
+
+          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+          chart.draw(data, options);
+        }
+      </script>
+  </body>
+</html>
