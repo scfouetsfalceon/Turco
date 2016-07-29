@@ -5,9 +5,6 @@ Tabla Unificada de Registro, Control y Operaciones(**TURCO**). Desarrollado para
 
 Posibles tecnologias a utilizar:
 * [Angular.js](https://angularjs.org/)
-* [KumbiaPHP 1.0Beta2](http://www.kumbiaphp.com/)
-* [Bootstrap Twitter](http://twitter.github.io/bootstrap/)
-* [Font-Awesome](http://fortawesome.github.io/Font-Awesome/)
 
 ## Equipo de Desarrollo
 * [Jaro Marval](jampgold@gmail.com) (Lider de Proyecto, Desarrollador, Seudo-Diseñador)
