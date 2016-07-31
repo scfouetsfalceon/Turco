@@ -1,37 +1,17 @@
 <!doctype html>
-<!--
-  Material Design Lite
-  Copyright 2015 Google Inc. All rights reserved.
+<!-- Material Design Lite - Copyright 2015 Google Inc. All rights reserved.
 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
+  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at https://www.apache.org/licenses/LICENSE-2.0
 
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License
+  Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License
 
   ****
 
-  Material Design Lite
-  Derechos de autor 2015 Google Inc. Todos los derechos reservados .
+  Material Design Lite - Derechos de autor 2015 Google Inc. Todos los derechos reservados .
 
-  Bajo la licencia Apache, versión 2.0 ( la "Licencia" ) ;
-  no se puede utilizar este archivo salvo en cumplimiento de la Licencia .
-  Usted puede obtener una copia de la Licencia en
+  Bajo la licencia Apache, versión 2.0 ( la "Licencia" ); no se puede utilizar este archivo salvo en cumplimiento de la Licencia. Usted puede obtener una copia de la Licencia en https://www.apache.org/licenses/LICENSE-2.0
 
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  A menos que lo requiera la ley aplicable o se acuerde por escrito, el software
-  distribuido bajo la Licencia se distribuye "TAL CUAL",
-  SIN GARANTÍAS O CONDICIONES DE CUALQUIER TIPO, ya sea expresa o implícita.
-  Consulte la licencia para los permisos de idioma específico que rige y
-  limitaciones en la licencia
--->
+  A menos que lo requiera la ley aplicable o se acuerde por escrito, el software distribuido bajo la Licencia se distribuye "TAL CUAL",  SIN GARANTÍAS O CONDICIONES DE CUALQUIER TIPO, ya sea expresa o implícita. Consulte la licencia para los permisos de idioma específico que rige y limitaciones en la licencia -->
 <html lang="es">
   <head>
     <meta charset="utf-8">
@@ -125,8 +105,8 @@
         <!-- Barra de navegación -->
         <nav class="navigation mdl-navigation mdl-color--blue-grey-800">
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Inicio</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Asistencia</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Adelanto</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons">assignment_turned_in</i>Asistencia</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">timeline</i>Adelanto</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Cifras Importantes</a>
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Foro</a>
           <div class="mdl-layout-spacer"></div>
@@ -142,7 +122,7 @@
         <!-- Datos del Grupo y la Unidad -->
         <div class="mdl-grid content">
           <!-- Datos de ubicación del Grupo y la Unidad -->
-          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone text-left grande">
+          <div class="mdl-cell mdl-cell--5-col mdl-cell--2-col-tablet mdl-cell--4-col-phone text-left grande">
             Región: <b> Falcón</b><br><!-- Nombre de la Región -->
             Distrito: <b> Paraguaná</b><br><!-- Nombre del Distrito -->
             Grupo: <b> Baden-Powell</b><br><!-- Nombre del Grupo -->
@@ -153,19 +133,47 @@
           </div>
 
           <!-- Datos estadísticos -->
-          <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--4-col-phone text-left mdl-shadow--2dp mdl-color--white">
-            <div id="columnchart_values" style="width: 300px; height: auto;"></div>
-          </div>
+          <div class="mdl-cell mdl-cell--7-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+            <table class="mdl-data-table mdl-shadow--2dp mdl-color--white" width="100%">
+              <thead>
+                <tr class="mdl-color--deep-purple-200">
+                  <th class="mdl-data-table__cell--non-numeric mdl-color--purple-900 mdl-color-text--white"><big>ADULTOS</big></th>
+                  <th class="mdl-data-table__cell--non-numeric">Nombre y Apellido</th>
+                    <th class="mdl-data-table__cell--non-numeric" style="text-align: center">Teléfono</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <!--Jefe de la Unidad: datos generales del jefe de la Unidad-->
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric text-center">Jefe de Tropa</td>
+                  <td class="mdl-data-table__cell--non-numeric">Arturo Pendragón</td>
+                  <td style="text-align: center">0414-9685112</td>
+                  <td><i class="material-icons azulclaro">add_circle</i></td>
+                </tr>
+                <!--Subjefe de la Unidad: datos generales del o los subjefes de la Unidad (Aquí pueden ser varias filas, dependiendo de la cantidada de subjefes)-->
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric text-center">Subjefe de Tropa</td>
+                  <td class="mdl-data-table__cell--non-numeric">Edward de Carnevorn</td>
+                  <td style="text-align: center">0412-6395124</td>
+                  <td><i class="material-icons azulclaro">add_circle</i></td>
+                </tr>
+                <!--Representante de la Unidad: datos generales del Padre y/o Representante de la Unidad-->
+                <tr>
+                  <td class="mdl-data-table__cell--non-numeric text-center">Representante de Unidad</td>
+                  <td class="mdl-data-table__cell--non-numeric">Ricardo León</td>
+                  <td style="text-align: center">0416-7558912</td>
+                  <td><i class="material-icons azulclaro">add_circle</i></td>
+                </tr>
 
-          <!-- Datos de registro -->
-          <div class="mdl-cell mdl-cell--5-col mdl-cell--3-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp mdl-color--white">
-            <div id="piechart" style="width: 400px; height: auto;"></div>
+              </tbody>
+            </table>
           </div>
         </div>
 
         <!-- Mensajes de alerta y recordatorios -->
         <div class="mdl-grid content">
-          <h4 class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--4-col-phone azulclaro contenedor"><i class="material-icons mdl-color-text--deep-orange-900">error</i> Alertas</h4><!-- Título -->
+          <h4 class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--4-col-phone azulclaro contenedor text-center"><i class="material-icons mdl-color-text--deep-orange-900 masgrande">error</i><br>Alertas</h4><!-- Título -->
           <!-- Alertas entrega de adelantos: Esto debe variar según la rama, y sólo debe aparecer el mensaje cuando existan insignias pendientes según la fecha de entrega -->
           <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
             <table class="contenedor" style="text-align: left; width: 100%;" border="0" cellpadding="2"
@@ -214,168 +222,28 @@
               </tbody>
             </table>
             <!-- MENSAJES: Aquí se verán los mensajes internos del sistema, es decir los que el Jefe de Grupo quiere que vena todas las unidades -->
-            <div class=" mdl-shadow--2dp">
+            <div class="mensaje mdl-color--white mdl-shadow--2dp">
               Una gota de agua puede parecer insignificante; pero el Mar no será el mismo sin esa gota de agua.
             </div>
           </div>
         </div>
 
-
-        <!-- DATOS GENERALES de los miembros de la Unidad: Jóvenes y Adultos
-        Aquí deberá aparecer un botón en cada fila para editar estos datos, si el usuario tiene las atribuciones -->
+        <!-- Datos Estadísticos -->
         <div class="mdl-grid content">
-          <!-- Datos generales de los jóvenes -->
-          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
-            <h5 class="mdl-color-text--blue-grey-700">Datos Jóvenes</h5>
-            <table class="mdl-data-table mdl-shadow--2dp mdl-color--white" width="100%">
-              <thead>
-                <tr class="mdl-color--yellow-100">
-                  <th>Credencial</th>
-                  <th class="mdl-data-table__cell--non-numeric">Nombre y Apellido</th>
-                  <th class="mdl-data-table__cell--non-numeric">Patrulla</th>
-                  <th>Editar</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>22569748</td>
-                  <td class="mdl-data-table__cell--non-numeric">Jesus Yanez</td>
-                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td>22369852</td>
-                  <td class="mdl-data-table__cell--non-numeric">Juan Vargas</td>
-                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td>23159753</td>
-                  <td class="mdl-data-table__cell--non-numeric">Kristian Marin</td>
-                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td>23123456</td>
-                  <td class="mdl-data-table__cell--non-numeric">Anderson Perozo</td>
-                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td>23321654</td>
-                  <td class="mdl-data-table__cell--non-numeric">Yosman Perozo</td>
-                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td>23587456</td>
-                  <td class="mdl-data-table__cell--non-numeric">Alejandro Bravo</td>
-                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td>23456789</td>
-                  <td class="mdl-data-table__cell--non-numeric">Cesar Leañez</td>
-                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td>23963147</td>
-                  <td class="mdl-data-table__cell--non-numeric">Rayber Ventura</td>
-                  <td class="mdl-data-table__cell--non-numeric">Cardenales</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td class="mdl-data-table__cell--non-numeric"></td>
-                  <td class="mdl-data-table__cell--non-numeric"></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>21596381</td>
-                  <td class="mdl-data-table__cell--non-numeric">José Jiménez</td>
-                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td>22326541</td>
-                  <td class="mdl-data-table__cell--non-numeric">Raul Rodríguez</td>
-                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td>22465897</td>
-                  <td class="mdl-data-table__cell--non-numeric">Roland Ratton</td>
-                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td>23321987</td>
-                  <td class="mdl-data-table__cell--non-numeric">Yanfran Yagua</td>
-                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td>23132879</td>
-                  <td class="mdl-data-table__cell--non-numeric">Carlos Cortéz</td>
-                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td>23564897</td>
-                  <td class="mdl-data-table__cell--non-numeric">Enfre Eljuri</td>
-                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td>23214896</td>
-                  <td class="mdl-data-table__cell--non-numeric">Sandro Sánchez</td>
-                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td>23542198</td>
-                  <td class="mdl-data-table__cell--non-numeric">Pedro Parker</td>
-                  <td class="mdl-data-table__cell--non-numeric">Halcones</td>
-                  <td><i class="material-icons azulclaro">mode_edit</i></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td class="mdl-data-table__cell--non-numeric"></td>
-                  <td class="mdl-data-table__cell--non-numeric"></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td class="mdl-data-table__cell--non-numeric"></td>
-                  <td class="mdl-data-table__cell--non-numeric"></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td class="mdl-data-table__cell--non-numeric"></td>
-                  <td class="mdl-data-table__cell--non-numeric"></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td class="mdl-data-table__cell--non-numeric"></td>
-                  <td class="mdl-data-table__cell--non-numeric"></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td class="mdl-data-table__cell--non-numeric"></td>
-                  <td class="mdl-data-table__cell--non-numeric"></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet mdl-cell--4-col-phone">
+
+          <!-- Datos permanecia y crecimiento -->
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet mdl-cell--4-col-phone text-center mdl-shadow--2dp mdl-color--white">
+            <h5 class="azulclaro">Permanencia y Crecimiento</h5>
+            <div id="columnchart_values" style="width: 100%; height: auto;"></div>
           </div>
 
+          <!-- Datos de registro -->
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--3-col-tablet mdl-cell--4-col-phone text-center mdl-shadow--2dp mdl-color--white">
+            <h5 class="azulclaro">Membresía</h5>
+            <div id="piechart" style="width: 100%; height: auto;"></div>
+          </div>
         </div>
+
       </main>
 
       <!-- ******************************** -->
@@ -392,7 +260,7 @@
           var data = google.visualization.arrayToDataTable([
             ["Indicador", "Meta", { role: "style" } ],
             ["Permanencia", 60, "silver"],
-            ["Crecimiento", 30, "gold"],
+            ["Crecimiento", 25, "gold"],
           ]);
 
           var view = new google.visualization.DataView(data);
@@ -404,7 +272,7 @@
                            2]);
 
           var options = {
-            width: 300,
+            width: 400,
             height: 200,
             bar: {groupWidth: "95%"},
             legend: { position: "none" },
@@ -423,7 +291,7 @@
           ]);
 
           var options = {
-            title: 'Registro Unidad'
+            title: ''
           };
 
           var chart = new google.visualization.PieChart(document.getElementById('piechart'));
