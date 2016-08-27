@@ -226,6 +226,9 @@ _:-ms-input-placeholder, :root .graph {
 .grande {
   font-size: 120%;
 }
+.masgrande {
+  font-size: 200%;
+}
 .options h3 {
   margin: 0;
 }
